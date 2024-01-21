@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Pendientes</title>
+    <style>
+        body{
+            font-family: 'Helvetica', Arial, sans-serif;
+            background-color: #C6D7E8;
+            padding-top: 60px;
+        }
+        h2, h3, h4{
+            font-style: italic;
+        }
+        .container{
+            max-width: 550px;
+            margin: auto;
+            background-color: #E1E4E8;
+            border-radius: 5px 5px 5px 5px;
+            -webkit-box-shadow: 2px 2px 13px -4px rgba(0,0,0,0.21);
+            box-shadow: 2px 2px 13px -4px rgba(0,0,0,0.21);
+            transition: 0.5s;
+
+        }
+        .container:hover{
+            -webkit-box-shadow: 5px 5px 25px -4px rgba(0, 0, 0, 0.4);
+            box-shadow: 5px 5px 15px -4px rgba(0, 0, 0, 0.4);
+            transition: 0.5s;
+        }
+       .envoltorio-tarea a{
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+        }
+       .envoltorio-tarea a:visited {
+            color: #3498db;
+        }
+        .barra-superior{
+            display: flex;
+            color:white;
+            justify-content: space-between;
+            padding: 20px;
+            border-radius: 5px 5px 0px 0px;
+            background: linear-gradient(90deg, #679FE8 0%, #2B3644 100%);
+        }
+        .barra-superior input{
+            background-color: #white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .barra-superior a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .barra-superior a:visited {
+            color: white;
+        }
+
+        .envoltorio-tarea{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: white;
+            boder-top: 1px solid rgb(225, 225, 225);
+        }
+        .titulo-tarea{
+            display: flex;
+        }
+        .titulo-tarea a{
+            text-decoration:none;
+            margin-left: 10px;
+        }
+        .icono-tarea-completa{
+            height: 20px;
+            width: 20px;
+            background-color: rgb(105, 162, 105);
+            border-radius: 50px;
+        }
+        .icono-tarea-incompleta{
+            height: 20px;
+            width: 20px;
+            background-color: rgb(218, 218, 218);
+            border-radius: 50px;
+        }
+        #envoltorio-agregar-buscar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        #enlace-agregar{
+            width: 35px;
+            font-size: 40px;
+            color: #0FC124;
+            text-decoration: none;
+            text-shadow: 1px 1px;
+        }
+        input[type=text],
+        input[type=password],
+
+        textarea{
+            border: 1px solid #EB796F;
+            boder-radius: 5px;
+            margin-right: 5px;
+            padding: 5px;
+            width: 90%;
+        }
+        label{
+            padding-top: 10px;
+            display: block;
+        }
+        .boton{
+            background-color: white;
+            color:black;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration:none;
+        }
+       .cuerpo-tarjeta{
+        padding: 20px;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+</body>
+</html>
